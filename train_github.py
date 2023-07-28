@@ -176,32 +176,9 @@ class ClassMetricsCallback(keras.callbacks.Callback):
             class_true_labels = tf.gather(y_val, class_indices)
             # 计算准确率、精确率和召回率
             accuracy = accuracy_score(class_true_labels, class_predictions)
-            # 计算准确率、精确率和召回率
-            # 计算每个类的真负样本数量
-            true_negatives = np.sum((predicted_labels != class_label) & (y_val != class_label))
-
-            real_negatives = np.sum(y_val != class_label)
-
-            tnr = true_negatives / real_negatives
-
-            # 计算真负率
-            # tnr = true_negatives / real_negatives
-
-            # tnr = tn / total_negative
-            tnr_by_class[class_label] = tnr
-            sample_count_by_class[class_label] = len(class_indices)
-            class_name = self.class_name[class_label]
             # 输出指标
-            print(f"{class_label} is {class_name},Accuracy: {accuracy:.4f},TNR: {tnr:.4f}")
-        # 计算Macro Average TNR
-        macro_average_tnr = np.mean(list(tnr_by_class.values()))
-
-        # 计算Weighted TNR
-        weighted_tnr = np.sum([tnr_by_class[class_label] * sample_count_by_class[class_label] for class_label in
-                               range(self.num_classes)]) / np.sum(list(sample_count_by_class.values()))
-        print("Macro Average TNR:", macro_average_tnr)
-        print("Weighted TNR:", weighted_tnr)
-
+            print(f"{class_label} is {class_name},Accuracy: {accuracy:.4f}")
+        
 
 
 data_path = 'all_data.pickle'
