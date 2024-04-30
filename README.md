@@ -52,15 +52,9 @@ use joern generate PDG
 
 we apply joern-cli to generate PDG
 
-run joern_graph.py 
+run joern_graph.py https://drive.google.com/file/d/13VoKA6fRdTQU-cV-0DNhFBeY8wp82-dH/view?usp=share_link
 
-[Joern_graph.py]: https://drive.google.com/file/d/13VoKA6fRdTQU-cV-0DNhFBeY8wp82-dH/view?usp=share_link
-
-You can use  the data in /data 
-
-[Data]: https://drive.google.com/file/d/15KPqpc6AtjqTicYCKwHuXhusuucFDkvi/view?usp=share_link
-
-
+You can use  the data in /data  https://drive.google.com/file/d/15KPqpc6AtjqTicYCKwHuXhusuucFDkvi/view?usp=share_link
 
 ## generate .bin files
 
@@ -77,17 +71,11 @@ python joern_graph.py  -i ./data/bins/Vul -o ./data/pdg/Vul -t export -r pdg
 python joern_graph.py  -i ./data/bins/Vul -o ./data/pdg/No-Vul -t export -r pdg
 ```
 
-After graph extraction, data is generate into pdg 
-
-[pdg]: https://drive.google.com/file/d/1sO_ucOMsA7klN19XlSH6RICCjepg_YAu/view?usp=share_link
-
-
+After graph extraction, we got the pdg https://drive.google.com/file/d/1sO_ucOMsA7klN19XlSH6RICCjepg_YAu/view?usp=share_link
 
 # Graph Extraction & Feature Extraction
 
-got the processing_back folder 
-
-[Process_back folder]: https://drive.google.com/drive/folders/1TeFoz6wbgrK8A1tmvRSOhHgij4ZQpDNt?usp=share_link
+got the processing_back folder https://drive.google.com/drive/folders/1TeFoz6wbgrK8A1tmvRSOhHgij4ZQpDNt?usp=share_link
 
 find_root_line.py contains basic function of slice and find_root_line.
 
@@ -125,15 +113,11 @@ python build_pickle.py
 
 After this step, the all_data.pickle file is generated in /process_pdg folder
 
-[Process_pdg]: https://drive.google.com/file/d/1ixxrLQ8qdU4QC88z6uO6KbZJ9s044LsT/view?usp=share_link
-
-
+https://drive.google.com/file/d/1ixxrLQ8qdU4QC88z6uO6KbZJ9s044LsT/view?usp=share_link
 
 # Embedding
 
-using word2vec in model/middle_word2vec.pkl
-
-[word2vec]: https://drive.google.com/drive/folders/19Gu0jJDe1iwZeG50unaqqIuWmWKm5qUz?usp=share_link
+using word2vec in model/middle_word2vec.pkl https://drive.google.com/drive/folders/19Gu0jJDe1iwZeG50unaqqIuWmWKm5qUz?usp=share_link
 
 If you want to achieve better performance of CVulKey, you'd better train a new word2vec by using larger dataset 
 
